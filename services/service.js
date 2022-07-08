@@ -1,9 +1,9 @@
-const axios = require('axios');
+const axios = require("axios");
 require("dotenv").config();
 
-const getinfo = async() => {
+const getInfo = async() => {
     console.log("Fetching Information")
-    return await axios.get(`$${process.env.url}`)
+    return await axios.get(`${process.env.url}`)
 };
 
-module.exports = {getinfo};
+module.exports = getInfo;
