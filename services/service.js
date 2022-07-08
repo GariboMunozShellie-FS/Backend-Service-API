@@ -6,9 +6,4 @@ const getinfo = async() => {
     return await axios.get(`$${process.env.url}`)
 };
 
-const getinfoByNAL = async(nal) => {
-    console.log("Fetching Information")
-    return await axios.get(`${process.env.nalURL}${nal}`)
-};
-
-module.exports = {getinfo, getinfoByNAL};
+module.exports = {getinfo};

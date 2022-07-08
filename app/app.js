@@ -6,7 +6,7 @@ app.get("/", (req, res, next) => {
     res.status(200).json({message: 'Service is up'});
 });
 
-app.use("/person", router);
+app.use("/users", router);
 
 app.use((req, res, next) => {
     const error = new Error("NOT FOUND!");
@@ -22,7 +22,7 @@ app.use((error,req, res, next) => {
             method:req.method
         }
     })
-})
+});
 
 module.exports = app;
 
