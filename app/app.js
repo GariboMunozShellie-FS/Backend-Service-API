@@ -6,7 +6,7 @@ app.get("/", (req, res, next) => {
     res.status(200).json({message: `Service is Up`})
 });
 
-app.use("/facts", router)
+app.use("/objects", router)
 
 app.use((req, res, next)=> {
     const error = new Error("Not Found!");
