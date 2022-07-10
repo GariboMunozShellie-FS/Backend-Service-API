@@ -1,5 +1,4 @@
 const axios = require("axios");
-let ending = '/images/random'
 require("dotenv").config();
 
 const getInfo = async() => {
