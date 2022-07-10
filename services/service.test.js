@@ -1,5 +1,6 @@
 const {getInfo, getInfoByid} = require("./service");
 
+jest.mock("./service");
 
 describe("Receive random objects Test", () => {
     test('I should receive ramdom categories', async () => {
@@ -11,7 +12,7 @@ describe("Receive random objects Test", () => {
 
     test('I should receive one category by ID', async () => {
         const result = await getInfoByid(5);
-        //console.log('result', result.data)
+        console.log('result', result.data)
         expect(result.data.id).toEqual(5);
         expect(result.data.name).toEqual('boxes');
     });
